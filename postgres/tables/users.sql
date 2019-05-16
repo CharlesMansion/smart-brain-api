@@ -7,6 +7,7 @@ CREATE TABLE users (
     entries BIGINT DEFAULT 0,
     age SMALLINT,
     pet VARCHAR(100),
+    avatarUrl text DEFAULT 'http://tachyons.io/img/logo.jpg',
     joined TIMESTAMP NOT NULL
 );
 

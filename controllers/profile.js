@@ -13,10 +13,10 @@ const handleProfileGet = (req, res, db) => {
 
 const handleProfileUpdate = (req, res, db) => {
   const {id} = req.params;
-  const {name, age, pet} = req.body.formInput;
+  const {name, age, pet, avatarurl} = req.body.formInput;
   db('users')
   .where({id})
-  .update({name, age, pet})
+  .update({name, age, pet, avatarurl})
   .then(resp => {
     res ? res.json("success bro!") : res.status(400).json("unable to update")
   })
